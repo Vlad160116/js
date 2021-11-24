@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>homework_2</title>
+</head>
+<body>
+
+
+
+
+
+
+
+<script>
+    // task_1
+    // - Дано змінну time яка рівна числу від 0 до 59. Потрібно написати код, який перевірить, до якої четверті години попадає число
+    // (в першу, другу, третю или четверту частину години).
+
+    let quarter = +prompt('До якої четверті години попадає число?');
+    if (quarter > 0 && quarter <= 14) {
+        document.write('<h1>first quarter</h1>');
+    } else if (quarter > 15 && quarter <= 30) {
+        document.write('<h1>second quarter</h1>');
+    } else if (quarter > 31 && quarter <= 44) {
+        document.write('<h1>third quarter</h1>');
+    } else if (quarter > 45 && quarter <= 59) {
+        document.write('<h1>fourth quarter</h1>');
+    }
+
+    // task_2
+    // - У змінній day дано якесь число від 1 до 31. Потрібно визначити, у яку половину(декаду) місяця потрапляє це число (у першу, другу чи третю).
+
+    let quarter = +prompt('У яку декаду місяця потрапляє це число?');
+    if (quarter > 0 && quarter <= 10) {
+        console.log('перша декада');
+    } else if (quarter > 11 && quarter <= 20) {
+        console.log('друга декада');
+    } else if (quarter > 21 && quarter <= 31) {
+        console.log('третя декада');
+    }
+
+    // task_3
+    // - У нас є змінна test, якщо  не дорівнює true, виведіть 'Вірно', інакше виведіть 'Неправильно'.
+    //     Перевірте роботу скрипта при test, що дорівнює true, false. Напишіть два варіанти скрипта - з коротким записом(тернаркою)
+
+    let num = 110;
+    let asd = num === 100 ? 'hundred' : 'not hundred';
+    console.log(asd);
+
+    let test1 = false;
+    let qwe = test1 != true ? 'Вірно' : 'Неправильно';
+    console.log(qwe);
+
+    let test2 = false;
+    let asd = test2 != false ? 'Вірно' : 'Неправильно';
+    console.log(asd);
+
+
+    // task_4
+    // - Якщо змінна a не дорівнює нулю, виведіть 'Вірно', інакше виведіть 'Невірно'. Перевірте  скрипт при a, що дорівнює 1, 0, -3
+
+    let a1 = -3;
+    let rty = a1 != -3 ? 'Вірно' : 'Невірно';
+    console.log(rty);
+
+    let a2 = 0;
+    let aqw = a2 != 0 ? 'Вірно' : 'Невірно';
+    console.log(aqw);
+
+    let a3 = 1;
+       let qaz = a3 != 1 ? 'Вірно' : 'Невірно';
+    console.log(qaz);
+
+    // task_5
+    // - Скласти розклад на тиждень за домопоги switch. Користувач вводить порядковий номер дня тижня і на екрані відображається інфа що заплановано на цей день.
+
+    let week = 'saturday';
+    switch (week) {
+        case 'sunday':
+            console.log('going to work!');
+            break;
+        case 'monday':
+            console.log('Go to work!');
+            break;
+        case 'tuesday':
+            console.log('Go to the movie theater!');
+            break;
+        case 'thusday':
+            console.log('go to the groceries store!');
+            break;
+        case 'friday':
+            console.log('Comeback to home!');
+            break;
+        case 'saturday':
+            console.log('Go to lake!');
+            break;
+    }
+
+    // task_6
+    // - Потрібно визначити Високосний рік чи ні. Високосні роки діляться націло на 4.
+
+    let year = prompt('Скільки днів у цьому році?');
+    let result = year % 4;
+    if (result === 0) {
+        document.write('Цей рік високосний');
+    } else {
+        document.write('Цей рік не високосний');
+    }
+
+    // task_7
+    // - Використовуючи конструкцію if..else, напишіть код, який запитуватиме: „Яка «офіційна» назва JavaScript?
+    // Якщо користувач вводить «ECMAScript», то показати: «Правильно!», інакше – відобразити: «Не знаєте? ECMAScript!
+
+    let title = prompt('Яка «офіційна» назва JavaScript?');
+    if (title === 'ECMAScript') {
+        console.log('«Правильно!»');
+    } else {
+        console.log('«Не знаєте? ECMAScript!»');
+    }
+
+</script>
+</body>
+</html>
