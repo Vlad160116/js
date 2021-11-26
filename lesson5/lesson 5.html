@@ -10,7 +10,7 @@
 <body>
 
 <script>
-    // preview
+    // PREVIEW
 
     // let asd = 0;
     // function increment(num) {
@@ -83,7 +83,7 @@
     // rec(0, 100);
 
     // функції callback
-
+    // 1.
     // function calculator(action, a, b) {
     //     if (action === '+') {
     //         return a + b;
@@ -101,41 +101,162 @@
     // }
     // console.log(calculator('custom', 10, 27));
 
+    // 2.
+    // function calculator(action, a, b) {
+    //     return action(a, b);
+    // }
+    // console.log(calculator(function (a, b) {
+    //     return a * b * 76 / a * 5 + 90 + b
+    // }, 10, 20));
 
-    function calculator(action, a, b) {
-        action(a, b);
-        return action
+    // треба відфільтрувати
+    // users = [
+    //     {name: 'vlad', age: 25, status: false,},
+    //     {name: 'max', age: 23, status: true,},
+    //     {name: 'vova', age: 15, status: false,},
+    //     {name: 'vika', age: 41, status: true,},
+    //     {name: 'vlad', age: 25, status: true,},
+    //     {name: 'max', age: 23, status: false,},
+    //     {name: 'vova', age: 15, status: true,},
+    //     {name: 'vika', age: 41, status: true,},
+    // ];
+
+    // 1 cпосіб
+    // push - бере певний масив(filter) і додає йому в кінець певний об'єкт(user)
+
+    // let filter = [];
+    // for (const user of users) {
+    //     if(user.age > 30) {
+    //         filter.push(user)
+    //     }
+    // }
+    // console.log(filter)
+
+    // 2 cпосіб якщо використовувати callback
+
+    // let filter = users.filter(function (user) {
+    //     return user.age > 30
+    // });
+    // console.log(filter);
+
+    // function calculator(action, a, b) {
+    //     return action(a, b);
+    // }
+    // console.log(calculator(function (a, b) {
+    //     return a * b * 76 / a * 5 + 90 + b
+    // }, 10, 20));
+
+    // cкорочена форма запису
+    // calculator ((a, b) => a + b, 10, 20)
+    // // неcкорочена форма запису
+    // console.log(calculator(function (a, b) {return a + b}, 10, 20));
+
+    // LECTURE
+
+    // Є типи даних:
+    // - примітиви(числові, булеві значення);
+    // - ссилочні:
+    //     - let arr = []; - масиви;
+    //     - let obj = {}; - об'єкти;
+
+    // Як примітивні об'єкти і ссилочні типи даних між собою співпрацюють
+    // в межах функції?
+
+    // somePrimitiveVar - якась примітивна змінна
+
+    // ЦЕ FUNCTION DECLARATION
+
+    // let i = 0;
+    // function increment(somePrimitiveVar) {
+    //     somePrimitiveVar++;
+    // };
+    // increment(i);
+    // console.log(i); // 0;
+
+    // let i = 0;
+    // function increment(somePrimitiveVar) {
+    //     somePrimitiveVar++;
+    //     return somePrimitiveVar
+    // };
+    // i = increment(i);
+    // console.log(i); // 1;
+
+    // let i = 0;
+    // function increment() {
+    //     i++;
+    // };
+    // increment(i); // 1;
+    // increment(i); // 2;
+    // increment(i); // 3;
+    // increment(i); // 4;
+    // increment(i); // 5;
+    // console.log(i); // 5;
+
+    // ссилочний тип даних
+
+    // let obj = {i: 0}
+    // function increment(refObj) {
+    //     refObj.i++;
+    // }
+    // increment(obj);
+    // console.log(obj);
+
+    // let user = {name: 'vasya'};
+    // let user2 = user;
+    // user2.age = 31;
+    // console.log(user2);
+    // console.log(user);
+
+    // foo(); а тут без різниці тому, що немає змінної;
+    // function foo() {
+    //     console.log('foo foo foo');
+    // }
+
+
+    // ЦЕ FUNCTION EXPRETION
+
+    // foo(); - це не правильно, виклик функції повинен бути в кінці;
+    // let foo = function () {
+    //     console.log('foo foo foo');
+    // }
+    // foo();
+
+
+    // let asd = function () {
+    //     console.log(arguments); // 1, 2, 3
+    // }
+    // asd(1, 2, 3);
+
+    // => - стрілочна функція
+    // let asd = () => {
+    //     console.log(arguments); // вийде помилка тому, що стрілочна функція не має такого контексту, вона не знає що таке arguments;
+    // }
+    // asd(1, 2, 3);
+
+    // 1 i 2 це одне і те саме
+    // 1)
+    // let calc = (a, b) => {
+    //     return a + b;
+    // }
+    // console.log(calc(27, 37));
+
+    // 2)
+    // let calc = (a, b) => a + b;
+    // console.log(calc(27, 37));
+
+    // let calc = (a, b, action) => {
+    //     if ( action === '+'){
+    //         return a + b;
+    //     } else {
+    //         return 0;
+    //     }
+    // }
+    // console.log(calc(27, 37, '+'));
+
+    let restFn = (a, b, c,...xxx) => {
+        console.log(xxx);
     }
-    calculator(function (a, b));
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    restFn(1, 2, 3, 4, 5);
 
 
 </script>
