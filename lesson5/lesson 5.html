@@ -253,10 +253,35 @@
     // }
     // console.log(calc(27, 37, '+'));
 
-    let restFn = (a, b, c,...xxx) => {
-        console.log(xxx);
+    // let restFn = (a, b, c,...xxx) => {
+    //     console.log(xxx);
+    // }
+    // restFn(1, 2, 3, 4, 5);
+
+    // (function () {
+    //   ('sdsddedea');
+    // });
+
+    // рекурсія
+
+    function recursion (start) {
+        console.log(start);
+        start++;
+        if (start >10) {
+            return;
+        }
+        recursion (start);
     }
-    restFn(1, 2, 3, 4, 5);
+    recursion (0)
+
+
+
+
+
+
+
+
+
 
 
 </script>
