@@ -36,7 +36,7 @@ maxNum (95, 76, 14);
     document.write(`<h2>Найбільший елемент масиву: ${arrayMax(maxArray)}</h2>`)
 
 // - створити функцію яка повертає найменше число з масиву
-    let maxArray = [465,3,14,45,16,50,14467,27,6943]
+    let minArray = [465,3,14,45,16,50,14467,27,6943]
     function arrayMin(array) {
         let min = array[0];
         for (const element of array) {
