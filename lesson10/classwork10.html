@@ -22,8 +22,8 @@
 
 <!--3 завдання-->
 
-<input type="text">
-<button id="btn">check</button>
+<!--<input type="text">-->
+<!--<button id="btn">check</button>-->
 
 
 
@@ -36,13 +36,51 @@
     // // - створити 2 форми  по 2 інпути в кожній. створити кнопку при кліку на яку считується та виводиться на консоль інформація з цих 2х форм.
     // // Кнопка повинна лежати за межами форм (Щоб уникнути  перезавантаження сторінки)
     // // Доступ до інпутів через Forms API. Отже дайте формі та інпутам всі необхідні атрибути.
-    // document.getElementById('button').onclick = function () {
-    //     let i1_1 = document.forms.f1.input1_1;
-    //     let i1_2 = document.forms.f1.input1_2;
-    //     let i2_1 = document.forms.f1.input2_1;
-    //     let i2_2 = document.forms.f1.input2_2;
-    //     console.log(i1_1, i1_2, i2_1, i2_2);
-    // }
+
+    // let div1 = document.createElement('div');
+    // div1.innerText = 'Контейнер 1';
+    // div1.style.margin = '20px';
+    // document.body.appendChild(div1);
+    // let div2 = document.createElement('div');
+    // div2.innerText = 'Контейнер 2';
+    // div2.style.margin = '20px';
+    // document.body.appendChild(div2);
+    //
+    // let form1 = document.createElement('form');
+    // form1.setAttribute('name', 'form1');
+    // div1.appendChild(form1);
+    //
+    // let form2 = document.createElement('form');
+    // form2.setAttribute('name', 'form2');
+    // div2.appendChild(form2);
+    //
+    // let inpute1 = document.createElement('input');
+    // inpute1.setAttribute('name', 'inpute1');
+    //
+    // let inpute2 = document.createElement('input');
+    // inpute2.setAttribute('name', 'inpute2');
+    //
+    // let inpute3 = document.createElement('input');
+    // inpute3.setAttribute('name', 'inpute3');
+    //
+    // let inpute4 = document.createElement('input');
+    // inpute4.setAttribute('name', 'inpute4');
+    //
+    // let button = document.createElement('button');
+    // button.innerText = 'Пуск';
+    //
+    // document.body.appendChild(button);
+    //
+    // form1.append(inpute1,inpute2);
+    // form2.append(inpute3,inpute4);
+    //
+    //
+    // button.addEventListener('click', function (){
+    //     console.log(document.forms.form1.inpute1.value);
+    //     console.log(document.forms.form1.inpute2.value);
+    //     console.log(document.forms.form2.inpute3.value);
+    //     console.log(document.forms.form2.inpute4.value);
+    // })
 
     // 2 завдання
     // - Створити 3 инпута та кнопку. Один визначає кількість рядків, другий - кількість ячеєк, третій вмиіст ячеєк.
@@ -50,8 +88,8 @@
     // (Додатковачастина для завдання)
 
     // // 3 завдання
-    // // - Сворити масив не цензyрних слів.
-    // // Сворити інпут текстового типу.
+    // // - Створити масив не цензyрних слів.
+    // // Створити інпут текстового типу.
     // // Якщо людина вводить слово і воно міститься в масиві не цензурних слів
     // // кинути алерт з попередженням.
     // // Перевірку робити при натисканні на кнопку
@@ -68,22 +106,36 @@
     // }
 
     // // 4 завдання
-    // // - Сворити масив не цензцрних слів.
+    // // - Сворити масив не цензурних слів.
     // // Сворити інпут текстового типу.
     // // Потрібно перевіряти чи не містить ціле речення в собі погані слова.
     // // Кинути алерт з попередженням у випадку якщо містить.
     // // Перевірку робити при натисканні на кнопку
-    //
+
     // let badWords = ['swearing', 'profanity', 'abusing'];
-    // let btn = document.getElementById('btn')
-    // btn.onclick = function () {
-    //     let word = document.getElementById('bad').value
-    //     for (const badWord of badWords) {
-    //         if (word.includes(badWord)) {
-    //             alert();
+    // let input = document.createElement('input')
+    // let btn = document.createElement('btn')
+    // btn.innerText = 'перевірка';
+    // document.body.append(input, btn);
+    // btn.addEventListener('click', function () {
+    //     let valueInput = input.value;
+    //
+    //     for (let badWord of badWords) {
+    //         if (badWord === valueInput) {
+    //             alert('Це вже хамство');
+    //             input.value = '';
+    //             return;
     //         }
     //     }
-    // }
+    //
+    //     if (valueInput) {
+    //         alert('Молодець!');
+    //         input.value = '';
+    //     }
+    // })
+
+
+
 </script>
 </body>
 </html>

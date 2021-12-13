@@ -7,27 +7,38 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>homework10</title>
 </head>
+<style>
+    .xxx {
+        display: none;
+    }
+    .menu {
+        cursor: pointer;
+    }
+    .menu.hidden ul {
+        display: none;
+    }
+</style>
 <body>
     <!-- 1 завдання-->
 <!--    <div id="text"></div>-->
 <!--    <input type="button" id="button">-->
 
     <!-- 2 завдання-->
-<!--    <div id="text"></div>-->
+<!--    <input type="text" id="age">-->
 <!--    <input type="button" id="button1">-->
 
     <!-- 3 завдання-->
 
-    <div class="menu">
-        <h4 class="title">IT(курси)</h4>
-        <ul>
-            <li>Перегляд preview</li>
-            <li>Перегляд lecture</li>
-            <li>Виконання практичної роботи</li>
-            <li>Виконання фінальної роботи</li>
-        </ul>
+<!--    <div class="menu">-->
+<!--        <h4 class="title">IT(курси)</h4>-->
+<!--        <ul>-->
+<!--            <li>Перегляд preview</li>-->
+<!--            <li>Перегляд lecture</li>-->
+<!--            <li>Виконання практичної роботи</li>-->
+<!--            <li>Виконання фінальної роботи</li>-->
+<!--        </ul>-->
 
-    </div>
+<!--    </div>-->
 
 
 
@@ -55,38 +66,64 @@
 
     // // 3 завдання
     // // - Создайте меню, которое раскрывается/сворачивается при клике
-    // let menuElement = document.querySelector('.menu');
-    // let titleElement = menuElement.querySelector('.title');
-    //
-    // titleElement.onclick = function() {
-    //     menuElement.classList.toggle('hidden');
-    // };
+    let menuElement = document.querySelector('.menu');
+    let titleElement = menuElement.querySelector('.title');
+
+    titleElement.onclick = function() {
+        menuElement.classList.toggle('hidden');
+    };
 
     // 4 завдання
     // - Создать список комментариев , пример объекта коментария - {title : 'lorem', body:'lorem ipsum dolo sit ameti'}.
     // Добавьте каждому комментарию по кнопке для сворачивания его body.
     // Вывести список комментариев в документ, каждый в своем блоке.
-    let comments = [
-        {name : 'lorem', age:25},
-        {name : 'lorem', age:25},
-        {name : 'lorem', age:25},
-        {name : 'lorem', age:25}
-    ]
+    // let comments = [
+    //     {name : 'lorem', body: 'asdzczxc'},
+    //     {name : 'lorem', body: 'asdzczxc'},
+    //     {name : 'lorem', body: 'asdzczxc'},
+    //     {name : 'lorem', body: 'asdzczxc'},
+    // ]
+    //
+    // let div1 = document.createElement('div');
+    // for (const comment of comments) {
+    //     let div = document.createElement('div');
+    //     let h4 = document.createElement('h4');
+    //     let p = document.createElement('p');
+    //     let button1 = document.createElement('button');
+    //     let hr = document.createElement('hr');
+    //
+    //     h4.innerText = comment.name;
+    //     p.innerHTML = comment.body;
+    //     button1.innerHTML = 'закрити';
+    //
+    //     button1.onclick = () => {
+    //         p.classList.add('xxx');
+    //     }
+    //     div.append(h4, p, button1);
+    //     div1.append(div, hr);
+    // }
+    // document.body.appendChild(div1)
 
-    let div1 = document.createElement('div');
-    for (const comment of comments) {
-        let div = document.createElement('div');
-        let h4 = document.createElement('h4');
-        let button = document.createElement('button');
-        h4.innerText = comment.name;
-        button.innerText = 'закрити';
-        button.onclick = function () {
-            h4.classList.add('xxx');
-        }
-        div.appendChild(h4, button);
-        div1.appendChild(div)
-    }
-    document.body.appendChild(div1)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 </script>
 </body>
 </html>
