@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>homework11</title>
+</head>
+<body>
+<!--1 завдання-->
+<!--<form action="" name="nameForm">-->
+<!--    <label>Name-->
+<!--        <input type="text">-->
+<!--    </label>-->
+<!--    <label>Age-->
+<!--        <input type="number">-->
+<!--    </label>-->
+<!--    <button id="btn">save</button>-->
+<!--</form>-->
+
+<!--2 завдання-->
+<form action="" name="carForm">
+    <label>Model Car
+        <input type="text">
+    </label>
+    <label>Type Car
+        <input type="number">
+    </label>
+    <label>Volume Car
+        <input type="number">
+    </label>
+    <button id="btnCar">save</button>
+</form>
+
+<script>
+
+    // <!--1 завдання-->
+    // -створити форму з інпутами для name та age.
+    // При відправці форми записати об'єкт в localstorage
+
+    // let name = document.forms.nameForm.name;
+    // let age = document.forms.nameForm.age;
+    // let btn = document.getElementById('btn');
+    // let key = 'key';
+    //
+    // let save = (userName, userAge) => {
+    //     let user = {
+    //         name: userName,
+    //         age: userAge
+    //     };
+    //     localStorage.setItem(key, JSON.stringify(user));
+    // };
+    //
+    // btn.onclick = () => {
+    //     save(name.value, age.value);
+    // }
+
+    <!--2 завдання-->
+    // -створити форму з інпутами для model,type та volume автівки.
+    // при відправці форми об'єкти зберігаються в масиві в локальному сховищі.
+
+    let model = document.forms.carForm.model;
+    let type = document.forms.carForm.type;
+    let volume = document.forms.carForm.volume;
+    let btnCar = document.getElementById('btnCar');
+    let item = 'keyCar';
+
+    let saveCar = (modelCar, typeCar, volumeCar) => {
+        let arr = JSON.parse(localStorage.getItem(item));
+
+        arr.push({modelCar, typeCar, volumeCar})
+        localStorage.setItem(item, JSON.stringify(arr));
+    };
+
+    btnCar.onclick = () => {
+        saveCar(model.value, type.value, volume.value);
+    }
+
+
+</script>
+</body>
+</html>
